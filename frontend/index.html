@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>aljo: 알바생이 추천하는 조합</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/slick.css" />
+</head>
+
+<body>
+  <main class="pg-main">
+    <header class="nav-bar">
+      <a class="nav-bar-logo" href="./index.html">
+        <img src="img/aljo_logo.jpg" alt="로고 이미지" />
+      </a>
+      <div class="nav-bar-menu">
+        <ul>
+          <li><a href="#">EAT딜</a></li>
+          <li><a href="#">맛집 리스트</a></li>
+          <li><a href="#">망고 스토리</a></li>
+        </ul>
+        <div class="menu-trigger">
+          <input type="checkbox" id="menu-trigger" />
+          <label for="menu-trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+      </div>
+    </header>
+    <header class="main-header" style="background-image: url(img/header1.jpg)">
+      <div class="title-text">
+        <h1>알바생이</h1>
+        <h1>추천하는 조합</h1>
+      </div>
+      <div class="header-text">
+        <div class="search">
+          <input type="text" placeholder="지역, 식당 또는 음식" />
+          <input type="submit" class="btn-search" />
+        </div>
+      </div>
+    </header>
+    <div class="banner">
+      <ul>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+      </ul>
+    </div>
+    <section class="module top-list">
+      <div class="list-title">
+        <h2 class="title">관리자 게시물</h2>
+        <a href="admin-board.html" class="more">리스트 더보기</a>
+      </div>
+      <div class="list-container">
+        <div class="top-list-menu slick-responsive">
+          <ul class="top-list-slider">
+            <li>
+              <a href="#">
+                <img src="img/food.jpg" alt="김치찌개" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/food2.jpg" alt="김치찌개" />
+              </a>
+            </li>
+          </ul>
+          <ul class="top-list-slider">
+            <li>
+              <a href="#">
+                <img src="img/food.jpg" alt="김치찌개" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/food2.jpg" alt="김치찌개" />
+              </a>
+            </li>
+          </ul>
+          <ul class="top-list-slider">
+            <li>
+              <a href="#">
+                <img src="img/food.jpg" alt="김치찌개" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/food2.jpg" alt="김치찌개" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="module seconde-list">
+      <div class="list-title">
+        <h2 class="title">사용자 게시물</h2>
+        <a href="user-board.html" class="more">리스트 더보기</a>
+      </div>
+      <div class="list-container">
+        <div class="top-list-menu slick-responsive">
+          <ul class="top-list-slider">
+            <li>
+              <a href="#">
+                <img src="img/food.jpg" alt="김치찌개" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/food2.jpg" alt="김치찌개" />
+              </a>
+            </li>
+          </ul>
+          <ul class="top-list-slider">
+            <li>
+              <a href="#">
+                <img src="img/food.jpg" alt="김치찌개" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/food2.jpg" alt="김치찌개" />
+              </a>
+            </li>
+          </ul>
+          <ul class="top-list-slider">
+            <li>
+              <a href="#">
+                <img src="img/food.jpg" alt="김치찌개" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/food2.jpg" alt="김치찌개" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="Menu hiding">
+    <ul>
+      <li><a href="index.html">홈</a></li>
+      <li><a href="signin.html">로그인</a></li>
+      <li><a href="admin-board.html">관리자 게시판</a></li>
+      <li><a href="user-board.html">사용자 게시판</a></li>
+      <li><a href="menu-recommend.html">사용자 맞춤 메뉴 추천</a></li>
+    </ul>
+  </div>
+  <!-- script -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script>
+    $(".slick-responsive").slick({
+      dots: true,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 6,
+      slidesToScroll: 6,
+      responsive: [{
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true,
+          },
+        },
+        /*{
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          },
+        },*/
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+          },
+        },
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ],
+    });
+  </script>
+
+  <script>
+    const menu = document.querySelector(".Menu");
+    const trigger = document.querySelector("#menu-trigger");
+
+    function handleClick() {
+      console.log("hi");
+      menu.classList.toggle("hiding");
+    }
+
+    function init() {
+      trigger.addEventListener("click", handleClick);
+    }
+
+    init();
+  </script>
+</body>
+
+</html>

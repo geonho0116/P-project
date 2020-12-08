@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>aljo: 알바생이 추천하는 조합</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/menu-recommend-result.css" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <style>
+        .rdo-grp label {
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            padding: 6px 8px;
+            border-radius: 20px;
+            float: left;
+            transition: all 0.2s ease;
+
+        }
+
+        .rdo-grp label:hover {
+            background: rgba(8, 126, 67, 0.06);
+        }
+
+        .rdo-grp label:not(:last-child) {
+            margin-right: 16px;
+        }
+
+        .rdo-grp label span {
+            vertical-align: middle;
+        }
+
+        .rdo-grp label span:first-child {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            width: 20px;
+            height: 20px;
+            background: #e8eaed;
+            border-radius: 50%;
+            transition: all 0.2s ease;
+            margin-right: 8px;
+        }
+
+
+        .rdo-grp label:hover span:first-child {
+            background: #04863e;
+        }
+
+        .rdo-grp input {
+            display: none;
+        }
+
+        .rdo-grp input:checked+label span:first-child {
+            background: #04863e;
+        }
+
+        .rdo-grp input:checked+label span:first-child:after {
+            transform: scale(0.5);
+        }
+
+        input[type="submit"] {
+            background: #04863e;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 5px gray;
+            position: relative;
+            height: 50px;
+            font-size: 1.0em;
+            padding: 0 2em;
+            cursor: pointer;
+            transition: 800ms ease all;
+            outline: none;
+        }
+
+        input[type="submit"]:hover {
+            background: #f8f8ff;
+            color: #04863e;
+            text-align: right;
+        }
+
+        input[type="submit"]:before,
+        button:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 2px;
+            width: 50%;
+            background: #f8f8ff;
+            transition: 400ms ease all;
+        }
+
+        input[type="submit"]:after {
+            right: inherit;
+            top: inherit;
+            left: 0;
+            bottom: 0;
+        }
+
+        input[type="submit"]:hover:before,
+        button:hover:after {
+            width: 50%;
+            transition: 800ms ease all;
+        }
+
+        form div img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="pg-user-board">
+        <header class="nav-bar">
+            <a class="nav-bar-logo" href="index.html">
+                <img src="img/aljo_logo.jpg" alt="로고 이미지" />
+            </a>
+            <div class="nav-search-bar">
+                <i class="fas fa-search"></i>
+                <label class="header-search-wrap">
+                    <input type="text" class="header-search-input" placeholder="원하는 카페 검색" />
+                </label>
+            </div>
+            <div class="nav-bar-menu">
+                <ul>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+                <div class="menu-trigger">
+                    <input type="checkbox" id="menu-trigger" />
+                    <label for="menu-trigger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+            </div>
+        </header>
+        <section class="user-board-container">
+            <div class="board-title">
+                <br>
+                <h1 class="title" style="text-align: center;">결과는!!!</h1><br>
+            </div>
+            <div class="loader-back"></div><br>
+            <div class="result" style="text-align: center;">
+                <img src="img/1.png"/><br><h1>여기에 %메뉴명 들어감!</h1><br>
+                <br><a href="#">%메뉴명으로 먹을 수 있는 꿀조합 보러가기!</a>
+                
+            </div>
+            <div class="loader"></div>
+        </section>
+    </main>
+    <div class="Menu hiding">
+        <ul>
+            <li><a href="index.html">홈</a></li>
+            <li><a href="signin.html">로그인</a></li>
+            <li><a href="admin-board.html">관리자 게시판</a></li>
+            <li><a href="user-board.html">사용자 게시판</a></li>
+            <li><a href="menu-recommend.html">사용자 맞춤 메뉴 추천</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const menu = document.querySelector(".Menu");
+        const trigger = document.querySelector("#menu-trigger");
+
+        function handleClick() {
+            console.log("hi");
+            menu.classList.toggle("hiding");
+        }
+
+        function init() {
+            trigger.addEventListener("click", handleClick);
+        }
+
+        init();
+    </script>
+    <script>
+        $(window).load(function () {
+            $('.loader').delay('3000').fadeOut();
+            $('.loader-back').delay('3000').fadeOut();
+        })
+    </script>
+</body>
+
+</html>

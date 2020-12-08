@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>aljo: 알바생이 추천하는 조합</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/slick.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+</head>
+
+<body>
+  <main class="pg-admin-board">
+    <header class="nav-bar">
+      <a class="nav-bar-logo" href="index.html">
+        <img src="img/aljo_logo.jpg" alt="로고 이미지" />
+      </a>
+      <div class="nav-search-bar">
+        <i class="fas fa-search"></i>
+        <label class="header-search-wrap">
+          <input type="text" class="header-search-input" placeholder="원하는 카페 검색" />
+        </label>
+      </div>
+      <div class="nav-bar-menu">
+        <ul>
+          <li><a href="#">EAT딜</a></li>
+          <li><a href="#">맛집 리스트</a></li>
+          <li><a href="#">망고 스토리</a></li>
+        </ul>
+        <div class="menu-trigger">
+          <input type="checkbox" id="menu-trigger" />
+          <label for="menu-trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+      </div>
+    </header>
+    <section class="detail-container">
+      <div class="post-header">
+        <h2 class="post-title">게시글 제목</h2>
+        <div class="info-wrap">
+          <img src="img/emoji.jpg" alt="" />
+          <div class="post-writer">
+            <span class="writer">작성자</span>
+            <span class="writer">스타벅스 알바생</span>
+          </div>
+        </div>
+      </div>
+      <div class="post-content">
+        <img src="img/menu1.jpg" alt="게시글 메뉴 사진" width="100%" />
+        <p class="content">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, earum illo, repellat corporis rerum,
+          similique vel rem deserunt odio tempora amet reprehenderit nihil doloremque magni qui. Rerum pariatur
+          praesentium rem temporibus dolores corrupti ut natus asperiores! Mollitia accusantium eveniet ullam porro
+          doloribus? Dolore doloremque enim pariatur numquam nulla ullam inventore repellat, dolores tenetur eligendi
+          explicabo soluta odit rerum nemo praesentium cum sequi placeat harum vitae. Nesciunt assumenda laboriosam
+          nostrum eveniet at sapiente magnam, beatae necessitatibus ut dolor accusamus iusto reiciendis?
+        </p>
+      </div>
+    </section>
+    <section class="detail-comment">
+      <form>
+        <strong class="title">댓글</strong>
+        <div class="comment">
+          <textarea name="comment"></textarea>
+        </div>
+        <div class="btn-area">
+          <button type="submit" class="btn-txt submit">등록</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <div class="Menu hiding">
+    <ul>
+      <li><a href="index.html">홈</a></li>
+      <li><a href="signin.html">로그인</a></li>
+      <li><a href="admin-board.html">관리자 게시판</a></li>
+      <li><a href="user-board.html">사용자 게시판</a></li>
+      <li><a href="menu-recommend.html">사용자 맞춤 메뉴 추천</a></li>
+    </ul>
+  </div>
+  <script>
+    const menu = document.querySelector(".Menu");
+    const trigger = document.querySelector("#menu-trigger");
+
+    function handleClick() {
+      console.log("hi");
+      menu.classList.toggle("hiding");
+    }
+
+    function init() {
+      trigger.addEventListener("click", handleClick);
+    }
+
+    init();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>aljo: 알바생이 추천하는 조합</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/slick.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+</head>
+
+<body>
+  <main class="pg-user-board">
+    <header class="nav-bar">
+      <a class="nav-bar-logo" href="index.html">
+        <img src="img/aljo_logo.jpg" alt="로고 이미지" />
+      </a>
+      <div class="nav-search-bar">
+        <i class="fas fa-search"></i>
+        <label class="header-search-wrap">
+          <input type="text" class="header-search-input" placeholder="원하는 카페 검색" />
+        </label>
+      </div>
+      <div class="nav-bar-menu">
+        <ul>
+          <li><a href="#">EAT딜</a></li>
+          <li><a href="#">맛집 리스트</a></li>
+          <li><a href="#">망고 스토리</a></li>
+        </ul>
+        <div class="menu-trigger">
+          <input type="checkbox" id="menu-trigger" />
+          <label for="menu-trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+      </div>
+    </header>
+    <section class="user-board-container">
+      <div class="board-title">
+        <h2 class="title">추천 조합 보기</h2>
+      </div>
+      <ul class="board-list">
+        <li>
+          <a href="admin-board-detail.html">
+            <figure>
+              <img src="img/menu1.jpg" alt="메뉴 이미지" width="100%" />
+              <figcaption>
+                <span class="menu-title">돼지바 쉐이크</span>
+                <div class="like">
+                  <i class="far fa-thumbs-up"></i>
+                  <span>100</span>
+                </div>
+              </figcaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="user-board-detail.html">
+            <figure>
+              <img src="img/menu1.jpg" alt="메뉴 이미지" width="100%" />
+              <figcaption>
+                <span class="menu-title">돼지바 쉐이크</span>
+                <div class="like">
+                  <i class="far fa-thumbs-up"></i>
+                  <span>100</span>
+                </div>
+              </figcaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="user-board-detail.html">
+            <figure>
+              <img src="img/menu1.jpg" alt="메뉴 이미지" width="100%" />
+              <figcaption>
+                <span class="menu-title">돼지바 쉐이크</span>
+                <div class="like">
+                  <i class="far fa-thumbs-up"></i>
+                  <span>100</span>
+                </div>
+              </figcaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="user-board-detail.html">
+            <figure>
+              <img src="img/menu1.jpg" alt="메뉴 이미지" width="100%" />
+              <figcaption>
+                <span class="menu-title">돼지바 쉐이크</span>
+                <div class="like">
+                  <i class="far fa-thumbs-up"></i>
+                  <span>100</span>
+                </div>
+              </figcaption>
+            </figure>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <div class="Menu hiding">
+    <ul>
+      <li><a href="index.html">홈</a></li>
+      <li><a href="signin.html">로그인</a></li>
+      <li><a href="admin-board.html">관리자 게시판</a></li>
+      <li><a href="user-board.html">사용자 게시판</a></li>
+      <li><a href="menu-recommend.html">사용자 맞춤 메뉴 추천</a></li>
+    </ul>
+  </div>
+  <script>
+    const menu = document.querySelector(".Menu");
+    const trigger = document.querySelector("#menu-trigger");
+
+    function handleClick() {
+      console.log("hi");
+      menu.classList.toggle("hiding");
+    }
+
+    function init() {
+      trigger.addEventListener("click", handleClick);
+    }
+
+    init();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>aljo: 알바생이 추천하는 조합</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/slick.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+  <script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js"></script>
+</head>
+
+<body>
+  <main class="pg-user-write">
+    <form action="">
+      <header class="write-header">
+        <div class="left">
+          <button type="button" class="btn-back">
+            <i class="fas fa-arrow-left" style="font-size: 1rem"></i>
+          </button>
+          <span>글쓰기</span>
+        </div>
+        <div class="right">
+          <button type="submit">등록</button>
+        </div>
+      </header>
+      <section class="write-container">
+        <div class="contents">
+          <div class="select">
+            <select name="brand">
+              <option value>브랜드명을 선택해 주세요.</option>
+              <option value="starbucks">스타벅스</option>
+              <option value="gongcha">공차</option>
+              <option value="ediya">이디야</option>
+            </select>
+            <select name="role">
+              <option value>역할을 선택해 주세요</option>
+              <option value="starbucks">알바생</option>
+              <option value="gongcha">매니아</option>
+              <option value="ediya">덕후</option>
+            </select>
+          </div>
+          <div class="input-wrap">
+            <div class="subject">
+              <textarea name="title-name" class="sbj" placeholder="제목을 입력해 주세요" rows="1" maxlength="128"
+                style="height: 18px"></textarea>
+            </div>
+            <div class="editor_wrap" style="padding: 0px">
+              <textarea name="editor1" id="editor1" cols="80" rows="10"></textarea>
+            </div>
+            <div class="hashtag-wrap"><input type="hidden" name="hashtags" value=></div>
+          </div>
+          <div class="btn-area">
+            <span>
+              <button type="button" class="cancel">취소</button>
+            </span>
+            <span>
+              <button type="submit" class="submit">등록</button>
+            </span>
+          </div>
+        </div>
+      </section>
+    </form>
+  </main>
+  <script>
+    ClassicEditor.create(document.querySelector("#editor1")).catch((error) => {
+      console.error(error);
+    });
+  </script>
+</body>
+
+</html>
